@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
         //if (Input.GetKey(KeyCode.RightArrow)) key = 1;
         //if (Input.GetKey(KeyCode.LeftArrow)) key = -1;
         if (Input.acceleration.x > this.threshold) key = 1;
-        if (Input.acceleration.y < -this.threshold) key = -1;
+        if (Input.acceleration.x < -this.threshold) key = -1;
 
         // プレイヤの速度
         float speedx = Mathf.Abs(this.rigid2D.velocity.x);
